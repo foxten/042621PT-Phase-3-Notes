@@ -80,12 +80,14 @@ Phase 3
 
     - Loops
         - while 
-
+            - do something until the condition provided is no longer true
 
         - until 
-
+            - do something until the condition provided is true/until we meet some criteria provided 
 
         - times
-
+            - do something x number of times
         
         - each
+            - akin to forEach in JavaScript
+            - will do something to/for each item in an array or a hash

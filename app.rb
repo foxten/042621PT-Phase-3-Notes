@@ -17,7 +17,7 @@ end
 # if it's snowing, we'll throw on a robe
 # it it's anything else, we'll just grab jeans and a jacket
 
-# weather_conditions =  'sunny' 
+weather_conditions =  'sunny' 
 
 # if statement
     outerwear = if weather_conditions == 'sunny'
@@ -42,13 +42,29 @@ end
 # let's use a statement modifier to put a statement in the console
 
 # unless our outerwear is set to 'robe', we should say we can throw something on today
-puts "I'll wear #{outerwear} today." unless outerwear == 'robe'
+puts "I'll wear a #{outerwear} today." unless outerwear == 'robe'
 
 # if our outerwear is set to 'robe', we should say we can stay in since the weather's too rough
 puts "The weather's too rough today. Going to stay inside." if outerwear == 'robe'
 
 
 # THE MAJOR CHALLENGE -> Let's combine all of the things we just did in a single method that'll output our outerwear for each weather condition
-# weather_conditions =  ['raining', 'snowing', 'sunny', 'cloudy']
+# weather_conditions_array =  ['raining', 'snowing', 'sunny', 'cloudy']
+weather_conditions_hash = {
+    raining: 'a poncho and rain boots',
+    snowing: 'robe',
+    sunny: 'shorts and sandals',
+    cloudy: 'jeans and a jacket'
+}
 
-# binding.pry
+def weather_update weather_conditions
+    weather_conditions.each do |w,o|
+            if w == :snowing
+                puts "The weather's too rough today. Going to stay inside."
+            else
+                puts "I'll wear #{o} today."
+            end
+        end
+end 
+
+binding.pry
