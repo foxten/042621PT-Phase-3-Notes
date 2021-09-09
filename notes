@@ -91,3 +91,49 @@ Phase 3
         - each
             - akin to forEach in JavaScript
             - will do something to/for each item in an array or a hash
+
+090721 Study Group
+    - What is Object Oriented Programming?
+        - Everything's an Object
+        - Helps make design & implementation easier
+        - Uses classes to create these objects 
+        - Abstracts a ton of code
+
+    - What are Ruby classes?
+        - Blueprints for the objects
+
+    - What are instances?
+        - Object occurrences of the ruling class
+
+    - Getter Methods
+        - How do we set these up?
+            - def method_name 
+                @instance_variable
+              end   
+
+        - When would we use them?
+            - When we want to read some data from our instance of a class, we use Getter methods
+
+    - Setter Methods
+        - How do we set these up?
+            - def method_name=(argument)
+                @instance_variable = argument
+              end
+
+        - When would we use them?
+            - To write some data to our instance 
+
+    - Macros
+        - What are they?
+            - attr_accessor
+            - attr_writer
+            - attr_reader
+
+        - When should we use them?
+            - use attr_writer when you need a setter method
+            - use attr_reader when you need a getter method
+            - use attr_accessor when you need to read and write (get and set)
+
+    - Single Responsibility / Separation of Concerns
+        - Make different classes for different functionality
+        - Makes code more open ended so we're coding for the future

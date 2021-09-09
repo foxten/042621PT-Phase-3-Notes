@@ -1,5 +1,5 @@
 require 'pry'
-# what will ruby return for the following methods?
+# # what will ruby return for the following methods?
 date = "#{Time.now.day}-#{Time.now.month}-#{Time.now.year}"
 puts date
 
@@ -11,11 +11,11 @@ def array_display
  ['this', 'is', 'not', 'an', 'array']
 end
 
-# let's write a conditional statement to change our outerwear based on the weather conditions
-# if it's sunny, we'll wear shorts and sandals
-# if it's raining, we'll wear a poncho and rain boots
-# if it's snowing, we'll throw on a robe
-# it it's anything else, we'll just grab jeans and a jacket
+# # let's write a conditional statement to change our outerwear based on the weather conditions
+# # if it's sunny, we'll wear shorts and sandals
+# # if it's raining, we'll wear a poncho and rain boots
+# # if it's snowing, we'll throw on a robe
+# # it it's anything else, we'll just grab jeans and a jacket
 
 weather_conditions =  'sunny' 
 
@@ -49,7 +49,7 @@ puts "The weather's too rough today. Going to stay inside." if outerwear == 'rob
 
 
 # THE MAJOR CHALLENGE -> Let's combine all of the things we just did in a single method that'll output our outerwear for each weather condition
-# weather_conditions_array =  ['raining', 'snowing', 'sunny', 'cloudy']
+weather_conditions_array =  ['raining', 'snowing', 'sunny', 'cloudy']
 weather_conditions_hash = {
     raining: 'a poncho and rain boots',
     snowing: 'robe',
@@ -66,5 +66,6 @@ def weather_update weather_conditions
             end
         end
 end 
+
 
 binding.pry
