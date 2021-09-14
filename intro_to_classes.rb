@@ -2,16 +2,47 @@ require 'pry'
 
 # music as our example, starting with Albums
 
-class Album
-    attr_accessor :album_title, :artist_name, :album_cover, :album_genre, :album_length
+# store all instances of the Album class
+    # return only the artist names 
 
-    def initialize (title, artist, album, genre, length)
+# create private methods to update the list of songs on an album, and to store the copyright info
+
+
+class Album
+    attr_accessor :album_title, :artist_name, :album_cover, :album_genre, :album_length, :songs
+    
+    @@all = []
+
+    def initialize (title, artist)
         @album_title = title
-        @artist_name = artist
-        @album_cover = album
-        @album_genre = genre
-        @album_length = length 
+        @artist_name = artist 
+        @@all << self
     end    
+ 
+    def album_cover album
+        self.album_cover = album
+    end
+   
+    def album_genre genre
+        self.album_genre = genre
+    end
+    
+    def album_length length
+        self.album_length = length
+        tracklist([])
+    end
+
+    def self.all 
+        @@all
+    end
+
+    private
+    # songs
+    def tracklist songs
+        self.songs = songs
+    end
+
+    # record company/copyright info
 
 end 
 
@@ -63,5 +94,3 @@ binding.pry
 #     @album_length 
 # end
 
-# songs
-# record company/copyright info

@@ -92,7 +92,7 @@ Phase 3
             - akin to forEach in JavaScript
             - will do something to/for each item in an array or a hash
 
-090721 Study Group
+090921 Study Group
     - What is Object Oriented Programming?
         - Everything's an Object
         - Helps make design & implementation easier
@@ -137,3 +137,33 @@ Phase 3
     - Single Responsibility / Separation of Concerns
         - Make different classes for different functionality
         - Makes code more open ended so we're coding for the future
+
+091321 Study Group
+    - Self
+         - Refers to the context it's in 
+            - ex.: self.length in an instance method refers to the instance of the class
+            - ex.: self can also be used in class methods
+
+
+    - Class Variables && Constants
+        - Variables
+            - within class scope
+                - @@variable_name
+            - cannot use the attr macros to get or set these
+
+        - Constants
+            - all caps
+            - signals to other developers that values should not be changed
+                - but they technically can be reassigned
+
+    - Instance Methods 
+        - methods that apply to an instance of a class 
+
+
+    - Class Methods
+        - methods that apply to the class
+
+
+    - Private Methods
+        - methods that aren't accessible outside of the class
+            - great for building APIs and restricting data access/permissions
