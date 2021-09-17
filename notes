@@ -138,12 +138,11 @@ Phase 3
         - Make different classes for different functionality
         - Makes code more open ended so we're coding for the future
 
-091321 Study Group
+091421 Study Group
     - Self
          - Refers to the context it's in 
             - ex.: self.length in an instance method refers to the instance of the class
             - ex.: self can also be used in class methods
-
 
     - Class Variables && Constants
         - Variables
@@ -159,11 +158,55 @@ Phase 3
     - Instance Methods 
         - methods that apply to an instance of a class 
 
-
     - Class Methods
         - methods that apply to the class
-
 
     - Private Methods
         - methods that aren't accessible outside of the class
             - great for building APIs and restricting data access/permissions
+
+091621 Study Group
+    - What's object inheritance?
+        - Subclasses inherit data/methods from the parent/master class
+        - Can we overwrite inherited methods?
+            - Yes! By using 'super'
+        - Super
+            - Allows us to use the original method from a parent class, but update the functionality for our subclass and its purposes
+
+    - Modules
+        - Groups methods and makes them available to other classes
+            - Not a direct parent, just a group of related information/methods that our classes can access
+
+        - Include vs Extend
+            - Include passes instance methods to classes from Modules
+            - Extend passes class methods to classes from Modules
+
+    - Module and Class Namespacing
+        - When working with nested modules and classes, we use namespacing to group our methods so there's less repetitive code
+
+    - :: vs <
+        - :: - For namespacing! (This thing) :: (should have access to this)
+        - < - Tells the system that (This thing) < (is a type of this thing)
+
+    - Keyword Arguments
+        - Allow us to pass in arguments in any order
+            - Similar to a hash with a key/value pair
+                - ex.: def some_method (arg1:, arg2:, arg3:)
+                            puts "#{arg1}"
+                            puts "#{arg2}"
+                            puts "#{arg3}"
+                        end 
+
+    - Mass Assignment
+        - Can pass in a hash as your argument, then tell Ruby how to evaluate/assign the key value pairs to your object
+            - self.send()
+
+Weekend Prompts (091721 - 092121)
+    - Considering our running example of the Flatiron Bureaucratic Record Label, what are some other classes we could create to expand our artist offerings?
+        - What attributes would these classes have? Are there any methods that we'd want to use for these classes and our album class? 
+            - What modules would you create?
+
+    - How would you go about separating our classes and modules into separate files?
+
+    - Practice using mass assignment to create new instances of the Album class! Get comfortable using self.send() and creating hashes in Ruby to make 
+      initializing instances of a class quicker. 
