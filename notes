@@ -201,7 +201,7 @@ Phase 3
         - Can pass in a hash as your argument, then tell Ruby how to evaluate/assign the key value pairs to your object
             - self.send()
 
-Weekend Prompts (091721 - 092121)
+Weekend Prompts (091721 - 092021)
     - Considering our running example of the Flatiron Bureaucratic Record Label, what are some other classes we could create to expand our artist offerings?
         - What attributes would these classes have? Are there any methods that we'd want to use for these classes and our album class? 
             - What modules would you create?
@@ -210,3 +210,62 @@ Weekend Prompts (091721 - 092121)
 
     - Practice using mass assignment to create new instances of the Album class! Get comfortable using self.send() and creating hashes in Ruby to make 
       initializing instances of a class quicker. 
+
+092321 Study Group
+    - SQL (sqlite) & Object Relational Mapping
+        - What is it?
+            - SQL: Structured Query Language and we use it to talk databases
+            - ORMs use the object oriented language to map data to databases
+
+        - What are the four major data type categories?
+            - Null, Text, Integer, Blob
+                - Real (falls under Integer)
+
+        - How are Booleans stored?
+            - In binary 
+                - 0 is False
+                - 1 is True
+        
+        - Primary Key vs Foreign Key
+            - Primary Key is a unique number used to identify a specific row in a table 
+            - Foreign Keys are unique numbers used to identify a row in a corresponding table
+                - Ex.: Used to identify an owner for a specific album in an albums table
+
+        - Relationships
+            - One-to-Many/Has Many - Belongs To
+                - One thing/instance of class owns many instances of another class
+
+            - Many to Many
+                - Many instances of a class own many other instances of another class
+                    - Join tables created for these contain id numbers for both classes
+                        - Ex.: album_artists
+        
+        -Join Tables
+            - Join Tables combine information from two tables in SQL
+
+            - Left (Outer) Join
+                - Returns all information from the first table (FROM), but only includes information from the second table if it matches some criteria
+
+            - Inner Join
+                - Only returns information if criteria is met in both tables
+
+
+    - Tasks
+        - Let's create a database table for each of the Ruby classes that we've already created, and one for artist data
+            - Albums
+                - :album_title
+                - :artist_id (foreign key)
+                - :cover 
+                - :genre 
+                - :length
+                - :type (digital or physical)
+
+            - Artists
+                - :artist_name 
+
+Weekend Prompts (092421 - 092721)
+    - Create and insert rows in both the Albums and Artists tables 
+        - Create a join table to represent one-to-many relationships
+            - Would you prefer a left outer join, or an inner join for this?
+        - Create a join table to represent many-to-many relationships
+            - How would you do this? 
